@@ -106,7 +106,6 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'awwwards.wsgi.application'
 
 WSGI_APPLICATION = 'awwwards.wsgi.application'
 
