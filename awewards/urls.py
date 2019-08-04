@@ -13,7 +13,6 @@ urlpatterns = [
     url(r'profile/', views.profile, name='profile'),
     url(r'^post/', views.upload_form, name='post'),
     url(r'^edit/', views.edit_prof, name='edit'),
-
 ]
 
 if settings.DEBUG:
