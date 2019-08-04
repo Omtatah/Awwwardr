@@ -110,7 +110,8 @@
             <h5 class="w3-center">My Projects</h5>
             <div class="w3-center"><a class="w3-button w3-round w3-green" href="{%url 'post'%}"><b>+ </b>Add a
                     Project</a>
-            </div><br>
+            </div>
+            <br>
             {%for project in my_projects%}
             <div class="w3-third w3-container w3-margin-bottom ">
                 <img src="{{project.project_photo.url}}" alt="project_photo" style="width:100%"
