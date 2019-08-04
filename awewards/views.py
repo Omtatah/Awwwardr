@@ -14,3 +14,18 @@ def register(request):
     else:
         form = UserCreationForm()
     return render(request, 'register.html', locals())
+
+@login_required(login_url='/accounts/login')
+def home(request):
+    current_user = request.user
+    all_projects = Projects.objects.all()
+    return render(request, 'index.html', locals())
+
+
+@login_required(login_url='/accounts/login')
+def project(request, project_id):
+    try:
+        project = Projects.objects.get(id=project_id)
+    except Projects.DoesNotExist:
+        raise Http404()
+    return render(request, "project.html", locals())
